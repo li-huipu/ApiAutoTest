@@ -1,0 +1,26 @@
+#登录成功
+- data: {"mobilephone":"18066668888","pwd":"abcd_1"}
+  expect: {"status":1,"code":"10001","data":null,"msg":"登录成功"}
+
+#密码错误
+- data: {"mobilephone":"18066668888","pwd":"abcd_123"}
+  expect: {"status":0,"code":"20111","data":{},"msg":"用户名或密码错误"}
+
+#密码为空字符串
+- data: {"mobilephone":"18066668888","pwd":""}
+  expect: {"status":0,"code":"20103","data":{},"msg":"密码不能为空"}
+
+#密码为空
+- data: {"mobilephone":"18066668888"}
+  expect: {"status":0,"code":"20103","data":{},"msg":"密码不能为空"}
+
+#手机号为空字符串
+- data: {"mobilephone":"","pwd":"abcd_1"}
+  expect: {'status': 0, 'code': '20103', 'data': None, 'msg': '手机号不能为空'}
+
+#手机号为空
+- data: {"pwd":"abcd_1"}
+  expect: {'status': 0, 'code': '20103', 'data': None, 'msg': '手机号不能为空'}
+
+
+

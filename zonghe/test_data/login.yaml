@@ -1,0 +1,9 @@
+#登录成功
+- regdata: {"mobilephone":"18066668888","pwd":"abcd_1"}
+  logindata: {"mobilephone":"18066668888","pwd":"abcd_1"}
+  expect: {"status":1,"code":"10001","data":null,"msg":"登录成功"}
+
+#密码错误
+- regdata: {"mobilephone":"18066668888","pwd":"abcd_1"}
+  logindata: {"mobilephone":"18066668888","pwd":"abcd_123"}
+  expect: {"status":0,"code":"20111","data":{},"msg":"用户名或密码错误"}
